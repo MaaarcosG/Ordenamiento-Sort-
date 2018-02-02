@@ -5,7 +5,7 @@
 import java.util.Arrays; 
 
 public class GnomeSort {
-	static void gnomeSort(int array[], int numero) {
+	public void gnomeSort(int array[], int numero) {
 		/*Atributo del indice del arrays*/
 		int index = 0;
 		/*condicion para recorrer el arrays*/
