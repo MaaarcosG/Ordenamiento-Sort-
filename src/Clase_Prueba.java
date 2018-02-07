@@ -6,11 +6,13 @@ import java.util.Arrays;
  */
 public class Clase_Prueba {
 	public static void main(String[] args) {
-		GnomeSort cadena = new GnomeSort();
-		int array[] = {34,2,10,-9};
-		cadena.gnomeSort(array, array.length);
-		System.out.println("Secuencia aplicando gnome sort");
-		System.out.println(Arrays.toString(array));
+		RadixSort cadena = new RadixSort();
+		int array[] = {170, 45, 75, 90, 802, 24, 2, 66};
+		int numero = array.length;
+		RadixSort.radixSort(array, array.length);
+		for(int i =0; i<numero;i++) {
+			System.out.println(array[i] + "");
+		}
 
 	}
 

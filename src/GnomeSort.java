@@ -1,6 +1,9 @@
 /**
  * @author Marcos Gutierrez				17909
  * @author Raul Monzon					17014
+ * Codigo obtenido como referencia, para la realizacion: 
+ * https://www.geeksforgeeks.org/gnome-sort-a-stupid-one/
+ * @propuse 
  */
 import java.util.Arrays; 
 
@@ -20,6 +23,7 @@ public class GnomeSort {
 			} else {
 				/*Contador para añadir dentro de la lista*/
 				int contador = 0;
+				/*El contador se añade a la array*/
 				contador = array[index];
 				array[index] = array[index - 1];
 				array[index - 1] = contador;
