@@ -55,7 +55,7 @@ public class MergerSort {
 			k++;
 		}
 	}
-	public void sort(int array, int l, int r) {
+	public void sort(int array[], int l, int r) {
 		if(l < r) {
 			/*Ciclo para buscar*/
 			int m = (l+r)/2;
@@ -63,7 +63,7 @@ public class MergerSort {
 			sort(array, l , m);
 			sort(array, m+1, r);
 			/*Merge sort*/
-			merge(array,l,m,r);
+			merge(array,r,l, m);
 		}
 	}
 }
