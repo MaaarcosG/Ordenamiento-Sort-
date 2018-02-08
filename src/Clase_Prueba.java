@@ -23,7 +23,6 @@ public class Clase_Prueba {
 				int numero = (int) (Math.random() * 3000) + 1;
 				escribir.write(Integer.toString(numero)+"\n");
 			}
-			escribir.write("termina aca");
 			//Cerramos la conexion
 			escribir.close();
 		}
