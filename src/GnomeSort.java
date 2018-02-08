@@ -5,7 +5,7 @@
  * https://www.geeksforgeeks.org/gnome-sort-a-stupid-one/
  * @propuse 
  */
-import java.util.Arrays; 
+//import java.util.Arrays; 
 
 public class GnomeSort {
 	public void gnomeSort(int array[], int numero) {

@@ -7,22 +7,19 @@ import java.io.*;
 import java.util.*;
 
 public class RadixSort {
-	/*	Metodo para obtener el numero mayor del array
-	 * 	@return max
+		
+	/* Metodo de la funcion del sort
+	 * @param int array[]
+	 * @param int numero
 	 */
-	public static int getMax(int array[], int numero){
-		/*Atributos para los números*/
-		int max = array[0];
-		/*Ciclo para recorrer el array*/
-		for(int i = 1; i < numero; i++) {
-			/*Si el numero es mayor*/
-			if(array[i] > max) {
-				max = array[i];
-			}
+	public static void radixSort(int array[], int numero) {
+		int mx = getMax(array, numero);
+		/*Ciclo*/
+		for(int exp = 1; mx/exp > 0; exp*=10) {
+			countSort(array, numero, exp);
 		}
-		/*Retornamos el numero mayor*/
-		return max;	
 	}
+	
 	/* Metodo que cuenta los numeros que se encuentra en el arrays
 	 * @param int array[]
 	 * @param int numero
@@ -52,15 +49,22 @@ public class RadixSort {
 			array[i] = output[i];
 		}
 	}
-	/* Metodo de la funcion del sort
-	 * @param int array[]
-	 * @param int numero
+	
+	/*	Metodo para obtener el numero mayor del array
+	 * 	@return max
 	 */
-	public static void radixSort(int array[], int numero) {
-		int mx = getMax(array, numero);
-		/*Ciclo*/
-		for(int exp = 1; mx/exp > 0; exp*=10) {
-			countSort(array, numero, exp);
+	public static int getMax(int array[], int numero){
+		/*Atributos para los números*/
+		int max = array[0];
+		/*Ciclo para recorrer el array*/
+		for(int i = 1; i < numero; i++) {
+			/*Si el numero es mayor*/
+			if(array[i] > max) {
+				max = array[i];
+			}
 		}
+		/*Retornamos el numero mayor*/
+		return max;	
 	}
+	
 }
