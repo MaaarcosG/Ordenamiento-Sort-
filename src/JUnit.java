@@ -16,7 +16,7 @@ class JUnit {
 	int generarNumero() {
 		int i = random.nextInt(3000);
 		
-		assert i >= 0 && i <10: String.format("no esta entre los numero", i);
+		assert i >= 0 && i <3000: String.format("no esta entre los numero", i);
 		return i;
 	}
 	public static void main(String[] args) {
