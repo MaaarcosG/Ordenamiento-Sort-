@@ -4,7 +4,7 @@
  */
 
 public class GnomeSort {
-	public void gnomeSort(int array[], int numero) {
+	public void gnomeSort(Comparable array[], int numero) {
 		/*Atributo del indice del arrays*/
 		int index = 0;
 		/*condicion para recorrer el arrays*/
@@ -14,11 +14,11 @@ public class GnomeSort {
 				index ++;
 			}
 			/**/
-			if(array[index] >= array[index - 1]) {
+			if(array[index].compareTo(array[index-1]) >= 0) {
 				index++;
 			} else {
 				/*Contador para añadir dentro de la lista*/
-				int contador = 0;
+				Comparable contador = 0;
 				/*El contador se añade a la array*/
 				contador = array[index];
 				array[index] = array[index - 1];
