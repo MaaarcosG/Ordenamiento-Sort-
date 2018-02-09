@@ -1,9 +1,4 @@
-//import java.util.Arrays;
 import java.util.Scanner;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.BufferedReader;
 /**
  * @author Marcos Gutierrez				17909
  * @author Raul Monzon					17014
