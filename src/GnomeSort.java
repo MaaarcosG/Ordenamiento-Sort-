@@ -1,11 +1,7 @@
 /**
  * @author Marcos Gutierrez				17909
  * @author Raul Monzon					17014
- * Codigo obtenido como referencia, para la realizacion: 
- * https://www.geeksforgeeks.org/gnome-sort-a-stupid-one/
- * @propuse 
  */
-//import java.util.Arrays; 
 
 public class GnomeSort {
 	public void gnomeSort(int array[], int numero) {
