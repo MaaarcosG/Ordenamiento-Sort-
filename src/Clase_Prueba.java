@@ -6,7 +6,9 @@ import java.util.Scanner;
 public class Clase_Prueba {
 	
 	public static void main(String[] args) {
+		
 		RandomNumbers datos = new RandomNumbers();
+		
 		System.out.println ("Desea calcular el tiempo de ordenación de un arreglo 1.ordenado ó 2.nuevo");
         String entradaTeclado = "";
         Scanner entradaEscaner = new Scanner (System.in); //Creación de un objeto Scanner
@@ -15,7 +17,7 @@ public class Clase_Prueba {
         if  (entradaTeclado.equals("2")) {
         	//Creación del archivo
         	datos.abrirArchivo();
-        }
+        }	
         datos.conversionString();
 		entradaEscaner.close();
 	}

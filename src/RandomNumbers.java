@@ -31,7 +31,7 @@ public class RandomNumbers {
     	}
 	}
 	public static void conversionString() {
-		int [] arreglo = new int[3000];
+		int [] array = new int[3000];
 		
 		//lectura del archivo
 		//Creación del String que contendra todo el texto
@@ -47,8 +47,8 @@ public class RandomNumbers {
 			//Guardamos los numeros que tenía cada linea
 			while((texto=contenido.readLine())!=null)
 			{
-				arreglo[i]= Integer.parseInt(texto);
-				System.out.println(Integer.toString(arreglo[i]));
+				array[i]= Integer.parseInt(texto);
+				System.out.println(Integer.toString(array[i]));
 				i++;
 			}
 			lector.close();
