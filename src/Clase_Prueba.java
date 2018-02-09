@@ -16,7 +16,6 @@ public class Clase_Prueba {
         entradaTeclado = entradaEscaner.nextLine (); 
         
         if  (entradaTeclado.equals("2")) {
-<<<<<<< HEAD
         		try {
         			
             		//Se crea un objeto File, el cual crea o abre acceso a un archivo que se especifica en su constructor
@@ -65,13 +64,10 @@ public class Clase_Prueba {
         	}
         	//Comparable[] array = new Comparable [3000];
         	//array = datos.conversionString();
-=======
         	//Creación del archivo
-        	datos.abrirArchivo();
-        	Comparable[] array = new Comparable [3000];
-        	array = datos.conversionString();
->>>>>>> branch 'master' of https://github.com/MaaarcosG/Ordenamiento-Sort-.git
-        	GnomeSort.gnomeSort(array, 3000);;
+        	GnomeSort.gnomeSort(array, 3000);
+        	//RadixSort.radixSort(array, 3000);
+        	BubbleSort.bubbleSort(array, 3000);
         }	
 		entradaEscaner.close();
 	}

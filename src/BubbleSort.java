@@ -2,25 +2,25 @@
  * @author Marcos Gutierrez				17909
  * @author Raul Monzon					17014
  */
-public class BubbleSort implements Comparable<Integer>{
-	int[] arreglo = new int[3000];
+public class BubbleSort{
+	Comparable[] arreglo = new Comparable[3000];
 	
-	public BubbleSort(int[] s) {
+	public BubbleSort(Comparable[] s) {
 		arreglo = s;
 	}
 	
-	public void bubbleSort(int[] arr) {
+	public static void bubbleSort(Comparable[] array, int numero) {
 	      boolean cambio = true;
 	      int j = 0;
 	      int temp;
 	      while (cambio) {
 	    	  cambio = false;
 	            j++;
-	            for (int i = 0; i < arr.length - j; i++) {                                       
-	                  if (arr[i] > arr[i + 1]) {                          
-	                	  	temp = arr[i];
-	                        arr[i] = arr[i + 1];
-	                        arr[i + 1] = temp;
+	            for (int i = 0; i < array.length - j; i++) {                                       
+	                  if (array[i].compareTo(array[i + 1]) > 0) {                          
+	                	  	temp = (int) array[i];
+	                        array[i] = array[i + 1];
+	                        array[i + 1] = temp;
 	                        cambio = true;
 	                  }
 	            }                
