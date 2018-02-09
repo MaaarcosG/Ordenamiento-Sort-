@@ -17,9 +17,9 @@ public class Clase_Prueba {
         if  (entradaTeclado.equals("2")) {
         	//Creación del archivo
         	datos.abrirArchivo();
-        	int[] array = new int [3000];
+        	Comparable[] array = new Comparable [3000];
         	array = datos.conversionString();
-        	
+        	GnomeSort.gnomeSort(array, 3000);;
         }	
 		entradaEscaner.close();
 	}

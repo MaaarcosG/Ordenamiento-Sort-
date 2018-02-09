@@ -31,9 +31,9 @@ public class RandomNumbers {
     	}
 	}
 
-	public 	static int[] conversionString() {
+	public 	static Comparable[] conversionString() {
 	
-		int [] array = new int[3000];
+		Comparable [] array = new Comparable[3000];
 		
 		//lectura del archivo
 		//Creación del String que contendra todo el texto
@@ -50,7 +50,7 @@ public class RandomNumbers {
 			while((texto=contenido.readLine())!=null)
 			{
 				array[i]= Integer.parseInt(texto);
-				System.out.println(Integer.toString(array[i]));
+				//System.out.println(Integer.toString(array[i]));
 				i++;
 			}
 			lector.close();
