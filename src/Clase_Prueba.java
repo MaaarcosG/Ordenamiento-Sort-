@@ -17,8 +17,10 @@ public class Clase_Prueba {
         if  (entradaTeclado.equals("2")) {
         	//Creación del archivo
         	datos.abrirArchivo();
+        	int[] array = new int [3000];
+        	array = datos.conversionString();
+        	
         }	
-        datos.conversionString();
 		entradaEscaner.close();
 	}
 	

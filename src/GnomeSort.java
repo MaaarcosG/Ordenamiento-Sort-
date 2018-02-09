@@ -4,6 +4,7 @@
  */
 
 public class GnomeSort {
+	
 	public void gnomeSort(Comparable array[], int numero) {
 		/*Atributo del indice del arrays*/
 		int index = 0;
@@ -26,6 +27,7 @@ public class GnomeSort {
 				index --;
 			}
 		}
-		return;
+		//return;
 	}
+	
 }

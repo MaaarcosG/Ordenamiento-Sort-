@@ -30,7 +30,9 @@ public class RandomNumbers {
     		System.out.println("Error al escribir");
     	}
 	}
-	public static void conversionString() {
+
+	public 	static int[] conversionString() {
+	
 		int [] array = new int[3000];
 		
 		//lectura del archivo
@@ -58,5 +60,8 @@ public class RandomNumbers {
 		catch(Exception e){
 			System.out.println("Error al leer");
 		}
+		
+		return  array;
+		
 	}
 }
