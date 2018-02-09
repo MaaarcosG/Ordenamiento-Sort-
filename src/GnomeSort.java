@@ -5,9 +5,11 @@
 
 public class GnomeSort {
 	
-	public void gnomeSort(Comparable array[], int numero) {
+	public static void  gnomeSort(Comparable array[], int numero) {
+		
 		/*Atributo del indice del arrays*/
 		int index = 0;
+		
 		/*condicion para recorrer el arrays*/
 		while(index < numero) {
 			/*Si numero es igual a 0*/
@@ -26,8 +28,12 @@ public class GnomeSort {
 				array[index - 1] = contador;
 				index --;
 			}
+		
 		}
-		//return;
+		for (int i=0; i<3000;i++) {
+			System.out.println(array[i]);
+		}
+		
 	}
 	
 }
