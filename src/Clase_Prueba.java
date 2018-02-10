@@ -61,6 +61,7 @@ public class Clase_Prueba {
 				arreglo[i]= Integer.parseInt(texto);
 				i++;
 			}
+			
 			lector.close();
 		}
 
