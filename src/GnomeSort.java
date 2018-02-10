@@ -17,7 +17,7 @@ public class GnomeSort {
 				index ++;
 			}
 			/**/
-			if (array[index].compareTo(array[index-1]) >= 0) {
+			if(array[index].compareTo(array[index-1]) >= 0) {
 				index++;
 			} else {
 				/*Contador para añadir dentro de la lista*/
@@ -29,7 +29,11 @@ public class GnomeSort {
 				index --;
 			}
 		
-		}		
+		}
+		for (int i=0; i<3000;i++) {
+			System.out.println(array[i]);
+		}
+		
 	}
 	
 }

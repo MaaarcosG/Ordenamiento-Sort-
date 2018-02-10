@@ -8,7 +8,7 @@ public class MergerSort {
 	 * Primer subarray es arra[l..m]
 	 * Segundo subarray es arra[(m+1)..r]
 	 */
-	public static void merge(Comparable array[], int l, int m, int r) {
+	public void merge(int array[], int l, int m, int r) {
 		/*Los dos primeros subarrayy*/
 		int numero1 = m - l + 1;
 		int numero2 = r - m;
@@ -19,9 +19,9 @@ public class MergerSort {
 		
 		/*Datos del temp del array*/
 		for(int i=0; i<numero1; i++) {
-			L[i] = (int) array[l + i];
+			L[i] = array[l + i];
 		} for(int j=0; j<numero2; j++) {
-			R[j] = (int) array[m + 1 +j];
+			R[j] = array[m + 1 +j];
 		}
 		
 		/*Merger temp de los array*/
@@ -54,14 +54,8 @@ public class MergerSort {
 			j++;
 			k++;
 		}
-		for (int hola=0;i<3000;i++) {
-			System.out.println(array[hola]);
-		}
 	}
-	
-	
-	
-	public void sort(Comparable array[], int l, int r) {
+	public void sort(int array[], int l, int r) {
 		if(l < r) {
 			/*Ciclo para buscar*/
 			int m = (l+r)/2;

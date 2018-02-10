@@ -11,7 +11,7 @@ public class QuickSort {
 	 * @param high ----> Ultimo elemento del index
 	 * @return 
 	 */
-	public static void quickSort(Comparable array[], int low, int high) {
+	public int quickSort(Comparable array[], int low, int high) {
 		Comparable pivot = array[high];
 		/*Indice para el numero mas pequeño */
 		int i = (low-1);
@@ -29,9 +29,8 @@ public class QuickSort {
 		Comparable temp = array[i+1];
 		array[i+1] = array[high];
 		array[high] = temp;
-		
+		return i+1;
 	}
-	
 	public static int partition(Comparable array[], int low, int high) {
 		Comparable pivot = array[high];
 		/*Indice del dato más pequeño*/
