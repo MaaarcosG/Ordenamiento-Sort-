@@ -30,9 +30,6 @@ public class GnomeSort {
 			}
 		
 		}
-		for (int i=0; i<3000;i++) {
-			System.out.println(array[i]);
-		}
 		
 	}
 	
