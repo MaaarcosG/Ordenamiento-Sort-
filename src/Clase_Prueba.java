@@ -15,8 +15,12 @@ public class Clase_Prueba {
         Scanner entradaEscaner = new Scanner (System.in); //Creación de un objeto Scanner
         entradaTeclado = entradaEscaner.nextLine (); 
         
+        Comparable [] array = new Comparable[3000];
+		int [] arreglo = new int[3000];
+		
         if  (entradaTeclado.equals("2")) {
-<<<<<<< HEAD
+        	
+        	
         		try {
         			
             		//Se crea un objeto File, el cual crea o abre acceso a un archivo que se especifica en su constructor
@@ -35,45 +39,51 @@ public class Clase_Prueba {
             	catch(Exception e){
             		System.out.println("Error al escribir");
             	}
-        		Comparable [] array = new Comparable[3000];
+  		
         		
-        		//lectura del archivo
-        		//Creación del String que contendra todo el texto
-        		try{
-        			//FileReader obtiene lo que tenga el archivo
-        			FileReader lector=new FileReader("texto.txt");
-        			//BufferedReader guarda el contenido del lector
-        			BufferedReader contenido=new BufferedReader(lector);
-        			
-        			int i=0;
-        			String texto="";
-        			
-        			//Guardamos los numeros que tenía cada linea
-        			while((texto=contenido.readLine())!=null)
-        			{
-        				array[i]= Integer.parseInt(texto);
-        				//System.out.println(Integer.toString(array[i]));
-        				i++;
-        			}
-        			lector.close();
-        		}
-
-        		//Si se causa un error al leer cae aqui
-        		catch(Exception e){
-        			System.out.println("Error al leer");
-        		
-        	}
-        	//Comparable[] array = new Comparable [3000];
-        	//array = datos.conversionString();
-=======
-        	//Creación del archivo
-        	datos.abrirArchivo();
-        	Comparable[] array = new Comparable [3000];
-        	array = datos.conversionString();
->>>>>>> branch 'master' of https://github.com/MaaarcosG/Ordenamiento-Sort-.git
-        	GnomeSort.gnomeSort(array, 3000);;
+        	
         }	
+      //lectura del archivo
+		//Creación del String que contendra todo el texto
+		try{
+			//FileReader obtiene lo que tenga el archivo
+			FileReader lector=new FileReader("texto.txt");
+			//BufferedReader guarda el contenido del lector
+			BufferedReader contenido=new BufferedReader(lector);
+			
+			int i=0;
+			String texto="";
+			
+			//Guardamos los numeros que tenía cada linea
+			while((texto=contenido.readLine())!=null)
+			{
+				array[i]= Integer.parseInt(texto);
+				arreglo[i]= Integer.parseInt(texto);
+				i++;
+			}
+			lector.close();
+		}
+
+		//Si se causa un error al leer cae aqui
+		catch(Exception e){
+			System.out.println("Error al leer");
+		
+		}
+		RadixSort.radixSort(arreglo, 3000);
+		GnomeSort.gnomeSort(array, 3000);
+		BubbleSort.bubbleSort(array, 3000);
+		QuickSort.quickSort(array, 0, 2999);
+		MergerSort.merge(array, 0, 1500, 2999);
 		entradaEscaner.close();
+		/*if  (entradaTeclado.equals("2")) {
+			File archivo=new File("texto.txt");
+    		FileWriter escribir=new FileWriter(archivo);
+    		for (int i=0; i<3000;i++) {
+    			escribir.write(Integer.toString(numero)+"\n");
+    		}
+    		//Cerramos la conexion
+    		escribir.close();
+		}*/
 	}
 	
 }
