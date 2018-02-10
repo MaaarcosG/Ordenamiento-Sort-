@@ -30,7 +30,7 @@ public static void main(String[] args) {
 				escribir.close();
 			}
     		//Si existe un problema al escribir cae aqui
-			catch(Exception e){
+    		catch(Exception e){
 				System.out.println("Error al escribir");
 			}
     	}
@@ -63,25 +63,39 @@ public static void main(String[] args) {
 		catch(Exception e){
 			System.out.println("Error al leer");
 		}
+		
 		RadixSort.radixSort(arreglo, 3000);
 		GnomeSort.gnomeSort(array, 3000);
 		MergerSort.merge(array, 0, 1500, 2999);
 		QuickSort.quickSort(array, 0, 2999);
 		BubbleSort.bubbleSort(array);
 		
+		final int N = array.length;
+        for(int i=N-1; i>0; i--) {
+            for(int j=0; j<i; j++) {
+                if(arreglo[j]>arreglo[j+1]) {
+                	int tmp = arreglo[j];
+                	arreglo[j]    = arreglo[j+1];
+                	arreglo[j+1]  = tmp;
+                }
+            }
+        }		
 		
-		/*//entradaEscaner.close();
+		//entradaEscaner.close();
 		if  (entradaTeclado.equals("2")) {
-		File archivo=new File("texto.txt");
-		FileWriter escribir=new FileWriter(archivo);
-		for (int i=0; i<3000;i++) {
-			escribir.write(Integer.toString(numero)+"\n");
+			try {
+				File archivo=new File("texto.txt");
+				FileWriter escribir=new FileWriter(archivo);
+				for (int i=0; i<3000;i++) {
+					escribir.write(Integer.toString(arreglo[i])+"\n");
+				}
+				escribir.close();
+			}
+			catch(Exception e){
+				System.out.println("Error al escribir");
+			}
 		}
-		//Cerramos la conexion
-		escribir.close();
 		
-		}
-		*/
 		
 	}
 }
